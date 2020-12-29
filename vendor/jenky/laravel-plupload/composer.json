@@ -1,0 +1,45 @@
+{
+    "name": "jenky/laravel-plupload",
+    "description": "Plupload package for Laravel 5",
+    "keywords": [
+        "laravel",
+        "plupload"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Linh Tran",
+            "email": "jenky.w0w@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/contracts": "^5.2",
+        "illuminate/support": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jenky\\LaravelPlupload\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev",
+            "dev-develop": "3.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Jenky\\LaravelPlupload\\PluploadServiceProvider"
+            ],
+            "aliases": {
+                "Plupload": "Jenky\\LaravelPlupload\\Facades\\Plupload"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
