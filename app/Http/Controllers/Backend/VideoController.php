@@ -62,6 +62,14 @@ class VideoController extends Controller
             $data['media_id'] = $media['media_id'];
         }
 
+        if ($request->hasFile('video')) {
+            $media = saveVideo($request, 'video');
+            if (TRUE != $media['status']) {
+                Flash::error($media['message']);
+                return redirect(route('video.index'));
+            }
+            $data['url'] = $media['file_path'];
+        }
         Video::create($data);
         Flash::success('Successfully created video');
         return redirect(route('video.index'));
@@ -118,6 +126,15 @@ class VideoController extends Controller
                 return redirect(route('video.index'));
             }
             $data['media_id'] = $media['media_id'];
+        }
+
+        if ($request->hasFile('video')) {
+            $media = saveVideo($request, 'video');
+            if (TRUE != $media['status']) {
+                Flash::error($media['message']);
+                return redirect(route('video.index'));
+            }
+            $data['url'] = $media['file_path'];
         }
 
         Video::find($id)->update($data);

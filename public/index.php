@@ -23,19 +23,22 @@ define('DB_DATE', 'Y-m-d H:i:s');
 // Media File Upload
 define('CATEGORY_MEDIA_UPLOAD', 16);
 define('LOCAL_MEDIA_UPLOAD', 17);
+define('VIDEO_UPLOAD', 18);
 
 define('PAGINATE', 25);
 
 define('MEDIA_PATH', json_encode(
     array(
         16 => 'upload/category',        
-        17 => 'upload/videos'        
+        17 => 'upload/videos',     
+        18 => 'upload/videos'     
     )
 ));
 
 define('MEDIA_TYPE', json_encode(
     array(
         'image' => array('field_name' => 'image_media', 'extension' => array("jpg", "gif", "png", "jpeg"), 'max_size' => 500000000000),
+    	'video' => array('field_name' => 'video', 'extension' => array("mp4"), 'max_size' => 50000000000),
     )
 ));
 

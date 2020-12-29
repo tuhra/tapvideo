@@ -28,7 +28,6 @@
     <script src="{{ asset('bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.1/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
 
     @yield('css')
 </head>
@@ -192,7 +191,6 @@
     <script src="{{ asset('bower_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
     <script src="{{ asset('bower_components/admin-lte/app.js')}}"></script>
     <script src="{{ asset('bower_components/select2/dist/js/select2.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('frontend/intl-tel-input/build/js/intlTelInput.js')}}"></script>
     
     <script>
 
@@ -298,8 +296,6 @@
         }
     
     </script>
-    <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
-    
     </body>
     </html>
 
