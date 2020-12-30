@@ -12,8 +12,9 @@
 */
 Route::group(['namespace' => 'Frontend'], function() {
 	// Route::group(['middleware' => ['myid']], function() {
-		Route::get('/', 'WelcomeController@index')->name('frontend.index');
+		Route::get('/', 'HomeController@index')->name('frontend.index');
 });
+Route::get('/', 'HomeController@index')->name('frontend.index');
 	
 
 Route::group(['prefix'=>'admin'],function(){

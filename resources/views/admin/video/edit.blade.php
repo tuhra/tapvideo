@@ -50,16 +50,13 @@
                         </div>
 
                         <div class="form-group col-sm-6 mmtext">
-                            {!! Form::label('url', 'Video URL:') !!} <span class="text-danger">*</span>
-                            {{ Form::hidden('media_path', VIDEO_UPLOAD) }}
-                            <div class="file-loading">
-                                <input type="file" id="video_media" name="video" accept="*">
-                            </div>
+                            {!! Form::label('url', 'URL:') !!} <span class="text-danger">*</span>
+                            {!! Form::text('url', null, ['class' => 'form-control']) !!}
                             @if ($errors->has('url'))
                                 <span class="text-danger">
                                     <strong>{{ $errors->first('url') }}</strong>
                                 </span>
-                           @endif
+                            @endif
                         </div>
 
                         <div class="form-group col-sm-12">
@@ -111,23 +108,5 @@
             $('.kv-file-remove').attr('data-url', dataUrl);
             $('.kv-file-remove').attr('data-toggle', 'modal');
         });
-         $("#video_media").fileinput({
-                overwriteInitial: true,
-                maxFileSize: 1500,
-                showClose: false,
-                showCaption: true,
-                showUpload: false,
-                browseLabel: 'Browse File',
-                removeLabel: 'Remove File',
-                uploadUrl: "/file-upload-batch/2",
-                browseIcon: '<i class="fa fa-cloud-upload"></i>',
-                removeIcon: '<i class="fa fa-trash-o"></i>',
-                removeTitle: 'Cancel or reset changes',
-                elErrorContainer: '#kv-avatar-errors-1',
-                msgErrorClass: 'alert alert-block alert-danger',
-                defaultPreviewContent: '<img src="<?php echo url('images/default_preview.png') ?>" alt="Your Avatar" class="img-rounded" style="width:250px">',
-                layoutTemplates: {main2: '{preview} ' + ' {remove} {browse}'},
-                allowedFileExtensions: ["mp4"]
-         });
    </script>
 @endsection

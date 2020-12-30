@@ -29,7 +29,7 @@
 
                     <div class="form-group col-sm-12">
                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                       <a href="{!! url('admin/import/index') !!}" class="btn btn-default">Cancel</a>
+                       <a href="{!! route('video.index') !!}" class="btn btn-default">Cancel</a>
                     </div>
 
                {!! Form::close() !!}
