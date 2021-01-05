@@ -52,6 +52,7 @@ class VideoController extends Controller
      */
     public function store(VideoRequest $request)
     {
+        // Update Code
         $data = $request->all();
         if ($request->hasFile('image_media')) {
             $media = saveSingleMedia($request, 'image');
