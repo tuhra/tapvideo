@@ -50,16 +50,13 @@
                         </div>
 
                         <div class="form-group col-sm-6 mmtext">
-                            {!! Form::label('url', 'Video URL:') !!} <span class="text-danger">*</span>
-                            {{ Form::hidden('media_path', VIDEO_UPLOAD) }}
-                            <div class="file-loading">
-                                <input type="file" id="video_media" name="video" accept="*">
-                            </div>
+                            {!! Form::label('url', 'URL:') !!} <span class="text-danger">*</span>
+                            {!! Form::text('url', null, ['class' => 'form-control']) !!}
                             @if ($errors->has('url'))
                                 <span class="text-danger">
                                     <strong>{{ $errors->first('url') }}</strong>
                                 </span>
-                           @endif
+                            @endif
                         </div>
 
                         <div class="form-group col-sm-12">
@@ -113,7 +110,6 @@
         });
          $("#video_media").fileinput({
                 overwriteInitial: true,
-                maxFileSize: 1500,
                 showClose: false,
                 showCaption: true,
                 showUpload: false,
