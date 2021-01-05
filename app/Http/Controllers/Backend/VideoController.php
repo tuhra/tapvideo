@@ -59,6 +59,7 @@ class VideoController extends Controller
                 Flash::error($media['message']);
                 return redirect(route('video.index'));
             }
+            
             $data['media_id'] = $media['media_id'];
         }
 
