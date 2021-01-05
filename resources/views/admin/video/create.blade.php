@@ -89,5 +89,22 @@
          layoutTemplates: {main2: '{preview} ' + ' {remove} {browse}'},
          allowedFileExtensions: ["jpg", "png", "gif", "jpeg"]
      });
+     $("#video_media").fileinput({
+         overwriteInitial: true,
+         showClose: false,
+         showCaption: true,
+         showUpload: false,
+         browseLabel: 'Browse File',
+         removeLabel: 'Remove File',
+         uploadUrl: "/file-upload-batch/2",
+         browseIcon: '<i class="fa fa-cloud-upload"></i>',
+         removeIcon: '<i class="fa fa-trash-o"></i>',
+         removeTitle: 'Cancel or reset changes',
+         elErrorContainer: '#kv-avatar-errors-1',
+         msgErrorClass: 'alert alert-block alert-danger',
+         defaultPreviewContent: '<img src="' + preview_image + '" alt="Your Avatar" class="img-rounded" style="width:250px">',
+         layoutTemplates: {main2: '{preview} ' + ' {remove} {browse}'},
+         allowedFileExtensions: ["mp4"]
+     });
     </script>
 @endsection
