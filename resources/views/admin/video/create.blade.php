@@ -94,7 +94,6 @@
      });
      $("#video_media").fileinput({
          overwriteInitial: true,
-         maxFileSize: 1500,
          showClose: false,
          showCaption: true,
          showUpload: false,
