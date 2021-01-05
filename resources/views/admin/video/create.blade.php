@@ -44,7 +44,7 @@
                            <small>Select file < 1500 KB</small>
                        </div>
                        <div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
-                   </div>
+                    </div>
 
                    <div class="form-group col-sm-6 mmtext">
                         {!! Form::label('url', 'URL:') !!} <span class="text-danger">*</span>
