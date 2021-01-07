@@ -52,11 +52,6 @@
                        <div class="file-loading">
                            <input type="file" id="video_media" name="video" accept="*">
                        </div>
-                       @if ($errors->has('url'))
-                           <span class="text-danger">
-                               <strong>{{ $errors->first('url') }}</strong>
-                           </span>
-                      @endif
                    </div>
 
                     <div class="form-group col-sm-12">
@@ -76,7 +71,6 @@
      var preview_image = "<?php echo url('images/default_preview.png') ?>";
      $("#image_media").fileinput({
          overwriteInitial: true,
-         maxFileSize: 1500,
          showClose: false,
          showCaption: true,
          showUpload: false,
@@ -94,7 +88,6 @@
      });
      $("#video_media").fileinput({
          overwriteInitial: true,
-         maxFileSize: 1500,
          showClose: false,
          showCaption: true,
          showUpload: false,
