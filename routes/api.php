@@ -47,5 +47,6 @@ Route::group(['namespace' => 'API'], function() {
 	// 	return json_encode($response);
 	// });
 	 Route::get('categories', 'CategoryController@categories');
+	 Route::get('{category_id}/videos', 'VideoController@getVideo');
 
 });

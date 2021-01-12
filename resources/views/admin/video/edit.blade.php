@@ -41,7 +41,7 @@
                             {!! Form::label('file', 'Upload Photo :') !!} <span class="text-danger">*</span>
                             {{ Form::hidden('media_path', LOCAL_MEDIA_UPLOAD) }}
                                 <div class="file-loading">
-                                    <input type="file" id="media_upload" name="image_media" accept="image/*">
+                                    <input type="file" id="media_upload" name="image_media" accept="image/*" required="">
                                 </div>
                             <div class="kv-avatar-hint">
                                 <small>Select file < 1500 KB</small>
@@ -53,7 +53,7 @@
                             {!! Form::label('url', 'Video URL:') !!} <span class="text-danger">*</span>
                             {{ Form::hidden('media_path', VIDEO_UPLOAD) }}
                             <div class="file-loading">
-                                <input type="file" id="video_media" name="video" accept="*">
+                                <input type="file" id="video_media" name="video" accept="*" required="">
                             </div>
                             @if ($errors->has('url'))
                                 <span class="text-danger">
